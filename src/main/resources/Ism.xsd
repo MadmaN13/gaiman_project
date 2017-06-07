@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2011 rel. 2 (http://www.altova.com) by TeaM DJiNN (TeaM DJiNN) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="IsmInstance" type="IsmType">
+		<xs:annotation/>
+	</xs:element>
+	<xs:complexType name="IsmType">
+		<xs:sequence>
+			<xs:element name="Id" type="xs:int"/>
+			<xs:element name="Name" type="xs:string"/>
+			<xs:element name="Cost" type="xs:double"/>
+			<xs:element name="Message" type="xs:string"/>
+			<xs:element name="ThreatList">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Threat" type="ThreatType" minOccurs="0" maxOccurs="unbounded"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ThreatType">
+		<xs:sequence>
+			<xs:element name="Id" type="xs:int"/>
+			<xs:element name="Name" type="xs:string"/>
+			<xs:element name="Possibility" type="xs:double"/>
+			<xs:element name="Hazard" type="xs:int"/>
+			<xs:element name="IsActual" type="xs:boolean"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>
