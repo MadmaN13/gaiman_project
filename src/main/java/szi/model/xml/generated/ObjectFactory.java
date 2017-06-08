@@ -57,11 +57,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link IsmType.ThreatList }
+     * Create an instance of {@link ThreatList }
      * 
      */
-    public IsmType.ThreatList createIsmTypeThreatList() {
-        return new IsmType.ThreatList();
+    public ThreatList createIsmTypeThreatList() {
+        return new ThreatList();
     }
 
     /**

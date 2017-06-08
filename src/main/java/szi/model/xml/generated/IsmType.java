@@ -52,7 +52,6 @@ import javax.xml.bind.annotation.XmlType;
     "id",
     "name",
     "cost",
-    "message",
     "threatList"
 })
 public class IsmType {
@@ -63,8 +62,6 @@ public class IsmType {
     protected String name;
     @XmlElement(name = "Cost")
     protected double cost;
-    @XmlElement(name = "Message", required = true)
-    protected String message;
     @XmlElement(name = "ThreatList", required = true)
     public ThreatList threatList;
 
@@ -96,16 +93,6 @@ public class IsmType {
 
     public void setCost(double value) {
         this.cost = value;
-    }
-
-
-    public String getMessage() {
-        return message;
-    }
-
-
-    public void setMessage(String value) {
-        this.message = value;
     }
 
     public ThreatList getThreatList() {
